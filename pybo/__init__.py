@@ -17,6 +17,8 @@ def create_app():
     db.init_app(app)    # 초기화
     migrate.init_app(app, db)
 
+    from . import models    # 모델 가져오기 
+
     from .views import main_views   # views 하위폴더의 main_views파일 호출
     app.register_blueprint(main_views.bp)
 
