@@ -3,7 +3,7 @@
     <ul>
         <!-- 반복문 : 질문을 하나씩 끄집어 내어서 제목을 리스트로 만들기 -->
         {% for question in question_list %}
-            <li><a href="{{ url_for('question.detail', question_id=question_id) }}">{{ question.subject }}</a></li>
+            <li><a href="{{ url_for('question.detail', question_id=question.id) }}">{{ question.subject }}</a></li>
         {% endfor %}
     </ul>
     <!-- 질문이 없는 경우에  -->
