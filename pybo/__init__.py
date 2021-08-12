@@ -22,5 +22,10 @@ def create_app():
     from .views import main_views   # views 하위폴더의 main_views파일 호출
     app.register_blueprint(main_views.bp)
 
+    # 블루프린트 객체 등록
+    from .views import main_views, question_views
+    app.register_blueprint(main_views.bp)
+    app.register_blueprint(question_views.bp)
+    
     return app
 
