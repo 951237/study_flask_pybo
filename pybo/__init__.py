@@ -19,9 +19,10 @@ def create_app():
 
     from . import models    # 모델 가져오기 
 
-    from .views import main_views, question_views   # views 하위폴더의 main_views파일 호출
+    from .views import main_views, question_views, answer_views   # views 하위폴더의 main_views파일 호출
     app.register_blueprint(main_views.bp)
     app.register_blueprint(question_views.bp)
+    app.register_blueprint(answer_views.bp)
 
     return app
 
